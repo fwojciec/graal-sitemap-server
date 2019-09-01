@@ -17,8 +17,8 @@ const (
 
 func main() {
 	http.HandleFunc("/", handler)
+	log.Printf("🚀 Sitemap server started at http://localhost:%s\n", port)
 	log.Fatal(http.ListenAndServe(port, nil))
-
 }
 
 func makeStaticPages(includeAuthors bool) []string {
